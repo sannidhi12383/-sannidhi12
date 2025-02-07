@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int arr1[] = {10, 20, 30, 40, 50};
+    int arr2[] = {1, 2, 3, 4, 5};
+    int result[5];
+    int n = sizeof(arr1) / sizeof(arr1[0]);
+    for (int i = 0; i < n; i++) {
+        result[i] = arr1[i] + arr2[i];
+    }
+    printf("Resultant array (sum of arr1 and arr2):\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", result[i]);
+    }
+    return 0;
+}
