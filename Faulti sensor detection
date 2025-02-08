@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+    int arr[]={25,30,28,55,32,29};
+    int n=6;
+    for(int i=0;i<n;i++){
+        if(arr[i]>50){
+      printf("There is a fault at %d\n",arr[i]);
+        printf("Position is :%d\n",i);
+        }
+    }
+}
