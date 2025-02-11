@@ -1,0 +1,19 @@
+#include<stdio.h>
+int moves=0;
+int move(int disk,char source,char destination){
+    printf("move disk %d from %c to %c\n",disk,source,destination);
+    moves++;
+}
+void hanoi(int n,char source,char destination,char temp){
+    if(n>0){
+        hanoi(n-1,source,temp,destination);
+        move(n,source,destination);
+        hanoi(n-1,temp,destination,source);
+    }
+}
+int main(){
+    int disks=4;
+    hanoi(disks, 'A', 'C', 'B');
+  printf("Total moves: %d\n", moves);
+  return 0;
+} 
